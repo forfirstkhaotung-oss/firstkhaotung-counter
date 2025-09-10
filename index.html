@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>#FirstKhaotung Counter</title>
+  <style>
+    body {
+      font-family: 'Helvetica', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f9f0ff;
+    }
+    h1 {
+      font-size: 36px;
+      color: #6a1b9a;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    #counter {
+      font-size: 80px;
+      color: #ab47bc;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>#FirstKhaotung Tweets</h1>
+  <div id="counter">1234</div>
+  <p>Live count placeholder</p>
+
+  <script>
+    // Demo: automatic increment to simulate live updates
+    let count = 1234; // starting number
+    const counter = document.getElementById('counter');
+
+    function updateCounter() {
+      // Random increment for demo purposes
+      count += Math.floor(Math.random() * 5);
+      counter.innerText = count;
+    }
+
+    // Update every 2 seconds
+    setInterval(updateCounter, 2000);
+  </script>
+</body>
+</html>
